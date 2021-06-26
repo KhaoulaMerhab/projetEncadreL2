@@ -1,0 +1,38 @@
+.faded{
+    visibility: hidden;
+}
+@keyframes fadein{
+    from{
+        visibility:hidden;
+        opacity: 0;
+    }
+
+    1%{
+        visibility:visible;
+        opacity: 0;
+    }
+
+    to{
+        visibility:visible;
+        opacity: 1;
+    }
+}
+.fadein{
+    animation:fadein .3s ease-in-out forwards;
+}
+
+@keyframes fadeout{
+    from{
+        visability:visible;
+        opacity: 1;
+    }
+
+
+    to{
+        visibility:hidden;
+        opacity: 0;
+    }
+}
+.fadeout{
+    animation:fadeout .3s ease-in-out forwards;
+}

@@ -1,0 +1,35 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    background: $primaryColor;
+}
+
+.flex{
+    display:flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-jc-se{
+        justify-content: space-evenly;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+
+    &-fd-c{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,207 @@
+//*header article 
+.header__article{
+    width: 90%;
+    margin: 0 auto;
+
+    &__img-part{
+        position: relative;
+        left: 25rem;
+
+        img:not(:last-child){
+            width: 25rem;
+            height: 85vh;
+            position: absolute;
+            z-index: 1;
+            left: -20rem;
+            margin: 2rem;
+
+        }
+
+        &--befEffect{
+            position: relative;
+            width: 25rem;
+            height: 75vh;
+            top: 45vh; left:1rem ;
+            position: relative;
+            z-index: 3;
+
+            img{
+                width: 20rem;
+                // height: 75vh;
+                left: -8vw;
+                top: 5vh;
+                position: relative;
+                z-index: 3;
+
+                &:hover{
+                    transform: translate(2vw,4vw);
+                    transition: .5s ease;
+                }
+            }
+            
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 20rem;
+                height: 80%;
+                left: -11rem;
+                top: 6.5rem;
+                z-index: 2;
+                background: $darkColor;
+
+                &:hover{
+                    transition: 1s ease-in-out;
+                    transform: translate(-2vw,-2vw);
+                }
+            }
+
+            &:hover{
+                transform: translate(-2vw,2vw);
+                transition: .5s ease;
+            }
+
+        }
+  
+    }
+
+    &__writting-part{
+        position: relative;
+        width: 100vw;
+        
+        z-index: 3;
+
+        &__h1{
+            position: absolute;
+            left: -20rem;
+        }
+
+        h1{
+            font-size: $titleSizeBig;
+            font-family: $titleFont;
+            font-weight: 900;
+            color: $titleColor;
+        }
+        
+        &__p{
+            width: 25vw;
+            position: absolute;
+            left: 50rem;
+        }
+
+        p{
+            font-size: 0.875rem;
+            font-family: $paragraphFonts;
+            font-weight: 300;
+            color: $lightTextColor;
+            text-align: end;
+            padding: 5rem 0rem 3rem 20rem;
+            width: 25vw;
+            line-height: 2.5;
+        }
+
+        .getStarted{
+            font-family: 'Raleway';
+            text-decoration: none;
+            font-size: 0.875rem;
+            float: right;
+            width: 10vw;
+            padding: 1rem;
+            text-align: center;
+            background: $purpleColor;
+            margin-right: 2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: $linksColor;
+
+            &:hover{
+                background: $lightOrangeBtn;
+                transition: all 500ms ease-in-out;       
+            }
+        }
+    }
+    
+    
+    
+        
+}
+//*media queries
+.change-look-md{
+    //hide-for-tablette
+    @include breakpointDown("medium"){
+        
+        position: relative;
+        //left: 25rem;
+
+        img:not(:last-child){
+            width: 20em;
+            height: 65vh;
+            position: absolute;
+            z-index: 1;
+            left: -27rem;
+            margin: 2rem;
+
+        }
+
+        p{
+            padding: 1rem 2rem 1rem 3rem;
+            width: 65vw;
+        }
+        
+        .getStarted{
+            width: 20vw;
+        }
+    }
+
+    
+}
+
+// .header-md{
+//     @include breakpointDown("medium"){
+//         &.header{
+//             height: 85vh;
+//         }
+//     }
+// }
+
+.change-look-sm{
+    //hide-for-mobile-and-tablette
+    @include breakpointDown("small"){
+        background-image: url("../../imgs/pic1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 86%;
+        height: 100vw;
+        padding: 2rem 7%;
+
+        img{
+            display: none;
+        }
+
+        h1{
+            font-size: 5.75vw;
+        }
+        
+        p{
+            width: 73vw;
+            padding: 1rem 2rem;
+        }
+
+        .getStarted{
+            width: 20vw;
+        }
+
+        //?overlay
+        #overlay{
+            position: absolute;
+            top: 11%;left: 0;
+            height: 110vw;
+            width: 100%;
+            background: $primaryColor;
+            opacity: .5;
+        }
+    }
+}
+
+//finish the header

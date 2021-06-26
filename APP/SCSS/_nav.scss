@@ -1,0 +1,241 @@
+//start the header
+//stylign the header
+.header{
+    background-image: url("../../imgs/bg-h.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height: 130vh;
+
+    &.open{
+        .overlay{
+            display:block;
+
+        }
+
+        //animation the humbergurMenu
+        span:first-child{
+            transform: rotate(45deg);
+            
+        }
+
+        span:nth-child(2){
+            opacity: 0;
+        }
+
+        span:last-child{
+            transform: rotate(-45deg);
+        }
+    }
+
+    .overlay{
+        opacity: 0;
+        position: fixed;
+        z-index: 5;
+        top: 13%;left:0; right:0; bottom: 0;
+        background: linear-gradient($overlayBg , transparent);
+    }
+
+    .nav{
+        margin:0 auto ;
+        top: 0;
+        padding: 4%;
+        font-family: $linksBtnsFont;
+        letter-spacing: 1px;
+        height: 2.5rem;
+        width: 90%;
+        position:relative;
+        // background:#fff;
+
+        //*logo
+        &__logo{
+            font-weight: 500;
+            color: $titleColor;
+            cursor:pointer;
+        }
+
+        //*menu
+        &__menu{
+            list-style: none;
+            font-size: $paragraph;
+            
+            li{
+                padding: 1rem ;
+                margin: 0 0.5rem;
+
+                a{
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: $titleColor;
+
+                    &:hover {
+                        color: $lightOrangeBtn;
+                        padding-bottom: 1rem;
+                        border-bottom: .85px solid $lightOrangeBtn;
+                        transition: all 500ms ease-in-out;
+                    }
+
+                }
+            }
+
+            &--login{
+                margin-left: 2rem;
+            }
+
+            &--signup{
+                padding: 0.5rem 1.25rem;
+                font-size: $paragraph;
+                font-weight: 700;
+                font-family: $linksBtnsFont;
+                border: none;
+                background-color: $lightOrange;
+                color: $linksColor;
+                letter-spacing: 2px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $lightOrangeBtn;
+                    transition: all 500ms ease-in-out;
+                }
+                
+            }
+
+        }
+        
+        //?styling hambergur menu
+        &__hambergurMenu{           //?for small devices
+            cursor: pointer;
+            height:1.6875rem;
+
+            span{
+                display: block;
+                width: 1.6875rem;
+                height: 0.03rem;
+                background-color: $lightTextColor;
+                transform-origin: -0.03125rem 0.03125rem;
+                transition: all .3s ease-in-out;
+
+                &:not(:last-child){
+                    margin-bottom: 0.6rem;
+                }
+            }   
+        }
+
+
+    }
+
+    .sticky{
+        position: fixed;
+        z-index: 5;
+        top: 0; left: 0;
+        background-color: $primaryColor;
+        width:94%;
+    }
+
+    //block menu
+
+    &__blockMenu{
+        top: 5rem;
+        position: fixed;
+        z-index: 3;
+        width: 50%;
+        height: 60vh;
+        padding: 2rem 5rem;
+        margin: 2rem 13%;
+        border-radius: 7px;
+        background-color: $primaryColor;
+        z-index: 7;
+
+        > a{
+            margin: 0 auto;
+            padding: 0.85rem 3rem;
+            display: block;
+            color: $linksColor;
+            text-decoration: none;
+            font-family: $linksBtnsFont;
+            
+            &:not(:nth-child(5)){
+                border-bottom: 0.015625rem solid $linksColor;
+            }
+
+            &:hover {
+                color: $lightOrangeBtn;
+                transition: all 500ms ease-in-out;
+            }
+        }
+
+        .sign{
+            margin-top: 2rem;
+
+            &--login{
+                padding: 0.5rem 1.25rem;
+                margin: 0 2rem;
+                text-decoration: none;
+                font-family: $linksBtnsFont;
+                color: $linksColor;
+
+                &:hover {
+                    color: $lightOrangeBtn;
+                    transition: all 500ms ease-in-out;
+                }
+            }
+
+            &--signup{
+                padding: 0.5rem 1.25rem;
+                border: none;
+                background: $lightOrange;
+                margin: 0 1.75rem;
+                font-family: $linksBtnsFont;
+                color: $linksColor;
+                font-weight: 500;
+                cursor: pointer;
+    
+                &:hover{
+                    background-color: $lightOrangeBtn;
+                    transition: all 500ms ease-in-out;
+                }
+                
+            }
+        }
+
+        
+
+        
+    }
+
+
+    
+
+    //visibility and media queries
+    .hide-for-small-devices{
+        //hide-for-mobile-and-tablette
+        @include breakpointDown("medium"){
+            display: none;
+
+            &.header{
+                height: 85vh;
+            }
+        }
+    }
+    .bg-nav{
+        //hide-for-mobile-and-tablette
+        @include breakpointDown("medium"){
+            background: $primaryColor;
+            width: 92%;
+            margin: 0;
+        }
+    }
+
+    .hide-for-big-devices{
+        //hide-for-desktop
+        @include breakpointUp("large"){
+            display: none;
+        }
+        &.fadein{
+            @include breakpointUp("large"){
+                display: none;
+            }
+        }
+    }
+}
+//finish the header

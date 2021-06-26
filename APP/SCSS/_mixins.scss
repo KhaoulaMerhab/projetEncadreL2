@@ -1,0 +1,50 @@
+//functions go here
+// @media (min-width : 64em ){
+    
+// }
+
+//Sass maps:
+//640px,1024px,1400px
+$breakpoints-up : ("medium" : "40em" , "large" : "64em" , "xlarge" : "87.5em") ;
+
+//639px,1023px,1399px
+$breakpoints-down : ("small" : "39.9375em" , "medium" : "63.9375em" , "large" : "87.4375em") ;
+
+//our mixins
+@mixin breakpointUp($viewportSize) {
+    @media(min-width : map-get($breakpoints-up , $viewportSize)) {
+        @content ; 
+    }
+}
+
+@mixin breakpointDown($viewportSize) {
+    @media(max-width : map-get($breakpoints-down , $viewportSize)) {
+        @content ; 
+    }
+}
+
+//*::after effect
+// @mixin afterEffectOrange($element) {
+//     $element::after{
+//         content:"";
+//         position:absolute;
+//                 width:100%;
+//                 height:45% ;
+//                 background-color:$lightOrange;
+//                 bottom:0;
+//                 left:0;
+//                 z-index:-1;        
+//     }
+// }
+// @mixin afterEffectPurple($element) {
+//     $element:after{
+//         content:"";
+//                 position:absolute;
+//                 width:100%;
+//                 height:45% ;
+//                 background-color:$lightGrayPurple;
+//                 bottom:0;
+//                 left:0;
+//                 z-index:-1
+//     }
+// }

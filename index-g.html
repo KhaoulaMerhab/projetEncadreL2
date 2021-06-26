@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--?  favicon  -->
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+
+    <!--?  Google Fonts  *-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!--?Fontawsome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--?link : css-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Artemis</title>
+</head>
+<body>
+    <!--*header-->
+    <header class="header header-md hide-for-small-devices">
+        <!--?overlay-->
+        <div class="overlay faded hide-for-big-devices"></div>
+
+        <!--?navigation-->
+        <nav class="nav flex flex-jc-sb flex-ai-c bg-nav">
+            <!--*logo-Artemis-->
+            <div class="nav__logo">
+                <h2>ARTEMIS</h2>
+            </div>
+
+            <!--*menu-links-->
+            <ul class="flex flex-jc-sb nav__menu hide-for-small-devices">
+                <li><a href="#">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+                <!--sign In/Up links-->
+                <li><a href="login" class="nav__menu--login">Log In</a></li>
+                <button class="nav__menu--signup">Sign Up</button>
+            </ul>
+
+
+            <!--*hamburger-menu-->
+            <div id="humburgerBtn" class="nav__hambergurMenu hide-for-big-devices">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+        <!--****block-menu<-click the humbergerMenu**-->
+        <div class="faded header__blockMenu flex flex-fd-c hide-for-big-devices">
+            <a href="#">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="#about">About</a>
+            <a href="contact.html">Contact</a>
+
+            <!--sign In/Up links-->
+            <div class="sign flex flex-jc-c">
+                <a href="login" class="sign--login">Log In</a>
+                <button class="sign--signup">Sign Up</button>
+            </div>
+        </div>
+
+        <!--?article-part-->
+            <article class="header__article flex flex-jc-c change-look-sm ">
+                <!--*imgs part-->
+                <div class="header__article__img-part change-look-md">
+                    <img src="imgs/pic1.jpg" alt="pic1">
+                    <div class="header__article__img-part--befEffect hide-for-small-devices">
+                        <img src="imgs/pic2.jpg" alt="pic2" id="img2" onclick="change()" onmouseout="back()">
+                    </div>
+                    
+                </div>
+                <!--*writting part-->
+                <div class="header__article__writting-part">
+                    
+                    <div class="writting-part__h1">
+                        <h1>
+                            Smudges , colors , Creativity .. Artemis home of art .
+                        </h1>
+                    </div>
+                    <div class="writting-part__p change-look-md">
+                        <p>
+                            you want a place to get inspired by , share your artistic work , grow your a knowledge about painting ! ARTEMIS is the right place . Here you can add your work , learn from your favorite artists and check what they have to share .
+                        </p>
+                        <a href="#AboutUs" class="getStarted">Get Started</a>
+                    </div>
+                    
+                </div>
+
+                <!--?overlay article-->
+                <div id="overlay"></div>
+            </article>   
+    </header>
+     <!--**header finishs here-->
+
+     <!--**about us goes here-->
+     <section id="about" class="change-look-md change-look-sm">
+        <!--?heading of about us--> 
+        <div id="about__header" class="flex flex-jc-c">
+            <h3>About Us</h3>
+         </div>
+         <!--?paragraph of about us-->
+         <div id="about__paragraph">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, praesentium. Rerum, aliquid officiis, incidunt, ad cumque amet laborum debitis odio cupiditate suscipit placeat perferendis .Want to know more about us ? <a href="about.html">Read More</a> 
+            </p>
+         </div>
+         <hr>
+     </section>
+     <!--**about us finishes here-->
+
+     <!--**gallery goes here-->
+     <section id="gallery" class="change-look-sm-g change-look-md-g">
+         <!--? gallery heading-->
+         <h3>Gallery</h3>
+         <!--? image gallery -->
+         <div class="container">
+             <div class="gallery ">
+                 <!--?gallery items-->
+                 <div class="gallery__item gallery__item--1">
+                     <img src="imgs/pic4.jpg" alt="pic4" class="gallery__img">
+                     <div class="gallery__item__overlay flex flex-jc-sb flex-ai-c">
+                        <div class="left-side">
+                            <i class="far fa-heart f1"></i>
+                            <i class="fas fa-heart f2"></i>
+                            <i class="far fa-comment-dots"></i>
+                       </div>
+                       <a href="imgs/pic4.jpg" download="pictureNumberOne"><i class="fas fa-download"></i></a>
+                     </div>
+                </div>
+                 <div class="gallery__item gallery__item--2">
+                    <img src="imgs/pic5.jpg" alt="pic5" class="gallery__img">
+                    <div class="gallery__item__overlay flex flex-jc-sb flex-ai-c">
+                        <div class="left-side">
+                            <i class="far fa-heart f1"></i>
+                            <i class="fas fa-heart f2"></i>
+                            <i class="far fa-comment-dots"></i>
+                       </div>
+                       <a href="imgs/pic5.jpg" download="pictureNumberTwo"><i class="fas fa-download"></i></a>
+                     </div>
+                </div>
+                <div class="gallery__item gallery__item--3">
+                    <img src="imgs/pic6.jpg" alt="pic6" class="gallery__img">
+                    <div class="gallery__item__overlay flex flex-jc-sb flex-ai-c">
+                        <div class="left-side">
+                            <i class="far fa-heart f1"></i>
+                            <i class="fas fa-heart f2"></i>
+                            <i class="far fa-comment-dots"></i>
+                       </div>
+                       <a href="imgs/pic6.jpg" download="pictureNumberThree"><i class="fas fa-download"></i></a>
+                     </div>
+                </div>
+                <div class="gallery__item gallery__item--4">
+                    <img src="imgs/pic7.jpg" alt="pic7" class="gallery__img">
+                    <div class="gallery__item__overlay flex flex-jc-sb flex-ai-c">
+                        <div class="left-side">
+                            <i class="far fa-heart f1"></i>
+                            <i class="fas fa-heart f2"></i>
+                            <i class="far fa-comment-dots" ></i>
+                       </div>
+                       <a href="imgs/pic7.jpg" download="pictureNumberFour"><i class="fas fa-download"></i></a>
+                     </div>
+                </div>
+                <div class="gallery__item gallery__item--5">
+                    <img src="imgs/pic8.jpg" alt="pic8" class="gallery__img">
+                    <div class="gallery__item__overlay flex flex-jc-sb flex-ai-c">
+                        <div class="left-side">
+                            <i class="far fa-heart f1"></i>
+                            <i class="fas fa-heart f2"></i>
+                            <i class="far fa-comment-dots"></i>
+                       </div>
+                       <a href="imgs/pic8.jpg" target="_blank" download="pictureNumberFive"><i class="fas fa-download"></i></a>
+                     </div>
+                </div>
+             </div>
+             <!--?read more -->
+             <a href="gallery.html" class="readMore">More</a>
+         </div>
+     </section>
+     <!--**gallry finishes here-->
+
+     <!--**reviews goes here-->
+     <section class="reviews change-look-md-r">
+        <div class="reviews__container flex flex-ai-c flex-jc-c">
+            <div class="center flex flex-jc-c flex-fd-c flex-ai-c">
+                <div class="center__img">
+                    <img src="imgs/artist1.jpg" alt="Christoph Cimpbell" id="img">
+                </div>
+                <div class="center__text flex flex-fd-c">
+                    <h4 id="name">Christoph Cimpbell</h4>
+                    <span id="job">Mangaka</span>
+                    <q id="quote">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum doloremque velit debitis esse non recusandae, earum dolorem, ab reiciendis ipsam inventore corrupti placeat, consectetur nisi</q>
+                </div>
+            </div>
+            <div class="arrows flex flex-jc-sb">
+               <div class="arrows__prev" id="prev">
+                  <i class="fas fa-chevron-left"></i>
+               </div>
+               <div class="arrows__next" id="next">
+                  <i class="fas fa-chevron-right"></i>
+               </div>
+            </div>
+        </div>
+
+     </section>
+     <!--**reviews finishes here-->
+
+     <!--**famous artist goes here -->
+     <section class="famousArtist flex flex-jc-sb change-look-md-fa">
+         <!--?text__part-->
+         <div class="text__part">
+             <h2>See what your <span> favouriteArtist</span> says</h2>
+             <q>
+                 I love those who can smile in trouble, who can gather strength from distress, and grow brave by reflection. 'Tis the business of little minds to shrink, but they whose heart is firm, and whose conscience approves their conduct, will pursue their principles unto death.
+             </q>
+             <span class="q--span">Leonardo Da Vinci</span>
+         </div>
+
+         <!--?img__part-->
+         <div class="img__part--afterEff">
+            <img src="imgs/f-artist.jpg" alt="">
+            <div class="overlay--img"></div>
+         </div>
+
+     </section>
+     <!--**famous artist finishes here-->
+
+     <!--**newsletters goes here-->
+    <section class="newsletter__part flex flex-jc-c change-look-md-nl">
+         <div class="leftImg__part">
+             <img src="imgs/pic10.jpg" alt="newsletterImg">
+         </div>
+         <div class="rightForm__part">
+             <div class="rightForm__part--title">
+                 <h2>subscribe to get our <span>newsletters</span></h2>
+             </div>
+             <form action="/" class="rightForm__part--form" method="GET">
+                <div class="form__username flex flex-jc-sb">
+                    <input type="text" name="firstname" id="firstName" placeholder="First Name">
+                    <input type="text" name="lastname" id="lastName" placeholder="Last Name">
+                </div>
+                <input type="email" placeholder="Email" required>
+                <div class="form__btns">
+                    <input type="submit" value="Get In Touch">
+                </div>
+            </form>
+         </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    <script src="app/js/script.js"></script>
+</body>
+</html>
