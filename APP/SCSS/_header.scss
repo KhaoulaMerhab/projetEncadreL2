@@ -156,13 +156,13 @@
     
 }
 
-// .header-md{
-//     @include breakpointDown("medium"){
-//         &.header{
-//             height: 85vh;
-//         }
-//     }
-// }
+.header-sm{
+    @include breakpointDown("small"){
+        &.header{
+            height: 92vh;
+        }
+    }
+}
 
 .change-look-sm{
     //hide-for-mobile-and-tablette

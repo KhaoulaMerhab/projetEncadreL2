@@ -80,6 +80,8 @@ section{
         &.change-look-sm{
             //change for tablette
             @include breakpointDown("small"){
+                margin-top: -5vh;
+
                 p{
                     width: 85%;
                 }
@@ -87,6 +89,7 @@ section{
         }
     }
 
+    //?styling the gallery section
     &#gallery{
         height:85vh;
         width: auto;
@@ -226,7 +229,7 @@ section{
         &.change-look-sm-g{
             //change for tablette
             @include breakpointDown("small"){
-                margin: 35vh auto;
+                margin: 40vh auto;
             }
         }
     }
@@ -328,12 +331,18 @@ section{
                 }
             }
         }
+
+        &.change-look-sm-r{
+            @include breakpointDown("small"){
+                margin-top: 40vh;
+            }
+        }
     }
 
     //? stylingthe famous artist section
     &.famousArtist{
         width: 85%;
-        margin: 15vh auto ;
+        margin: 25vh auto ;
 
         .text__part{
             width: 47%;
@@ -463,6 +472,12 @@ section{
             }
         }
 
+        &.change-look-sm-fa{
+            @include breakpointDown("small"){
+                margin-top: 20vh;
+            }
+        }
+
     }
 
     //?styling newsletters section
@@ -470,7 +485,7 @@ section{
         top: 118vw;
         height: 85vh;
         width: 85%;
-        margin: 50vh auto;
+        margin: 50vh auto 30vh;
 
         .leftImg__part{
             width: 35vw;
@@ -489,6 +504,7 @@ section{
             
         //*the rightForm__part writting
         .rightForm__part{
+
             //*title of the right part
             &--title{
                 width: 50vw;
@@ -502,6 +518,7 @@ section{
                     font-family: $titleFont;
                     font-weight: 900;
                     color: $titleColor;
+                    //letter-spacing: 2px;
 
                     span{
                         position: relative;
@@ -523,6 +540,9 @@ section{
             &--form{
                 margin: -6vw 5vw;
 
+                .form__username{
+                    width: 42.5vw;
+                }
                 //*input field styles
                 input[type="text"], input[type="email"]{
                     padding: 1rem;
@@ -536,12 +556,12 @@ section{
 
                 //*input--> text field styles
                 input[type="text"]{
-                    width: 16vw;
+                    width: 17vw;
                 }
 
                 //*input--> email field styles
                 input[type="email"]{
-                    width: 37vw;
+                    width: 40vw;
                 }
             
                 //*input--> submit field styles
@@ -563,20 +583,24 @@ section{
                     }
                 }    
             }
-
         }
 
         &.change-look-md-nl{
             //hide-for-mobile-and-tablette
             @include breakpointDown("medium"){
-                background-image: url('../../IMGS/REV-BG.PNG');
+                background-image: url("https://images.unsplash.com/photo-1602536100338-c7762727ddb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
                 background-size: cover;
                 background-repeat: no-repeat;
-                height: 100vh;
+                background-position: center;
+                height: 50vh;
                 width: 100%;
                 padding: 15vh 0;
                 z-index: -2;
-                margin-top: 30vh;
+                margin-top: 35vh;
+                text-align: center;
+
+                display: flex;
+                align-items: center;
 
                 .leftImg__part{
                     display: none;
@@ -585,6 +609,8 @@ section{
                 .rightForm__part{
                     &--title{
                         width: 75vw;
+                        margin: 0 auto;
+                        left: 0;    top: -7vw;
                     }
 
                     input[type="text"]{
@@ -594,6 +620,14 @@ section{
                         width: 62vw;
                     }
                 }
+            }
+        }
+
+        &.change-look-sm-nl{
+            //hide-for-mobile-and-tablette
+            @include breakpointDown("small"){
+                margin-top: 40vh;
+
             }
         }
 

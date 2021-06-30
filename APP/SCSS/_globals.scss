@@ -10,6 +10,11 @@ body{
     background: $primaryColor;
 }
 
+::selection{
+    background: #ffe04cf0;
+    color: $titleColor;
+}
+
 .flex{
     display:flex;
 
