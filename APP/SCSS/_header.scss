@@ -159,7 +159,7 @@
 .header-sm{
     @include breakpointDown("small"){
         &.header{
-            height: 92vh;
+            height: 130vh;
         }
     }
 }
@@ -196,7 +196,7 @@
         #overlay{
             position: absolute;
             top: 11%;left: 0;
-            height: 110vw;
+            height: 130vh;
             width: 100%;
             background: $primaryColor;
             opacity: .5;

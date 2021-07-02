@@ -83,6 +83,7 @@
                 }
             }
 
+            //? similar links container
             .similarLinksContainer{
                 padding:0 2vw;
 
@@ -113,6 +114,39 @@
                     grid-gap: 2vw;
                     grid-template-columns: repeat(2,40%);
                     justify-content: center;
+
+                    .logoContainer{
+                        .logoImg{
+                            width: 21vw;
+                            height: 17vw;
+                        }
+                    }
+
+                    .linksContainer ul , .similarLinksContainer ul{
+                        margin-left: -3vw;
+                    }
+                    
+                }
+            }
+            //* small
+            &.upSec-sm{
+                @include breakpointDown("small"){
+                    display: grid;
+                    grid-gap: 2vw;
+                    grid-template-columns:repeat(1 , 80%);
+                    grid-template-rows: repeat(4,40vh);
+                    justify-content: center;
+
+                    .logoContainer{
+                        .logoImg{
+                            width: 25vw;
+                            height: 20vw;
+                        }
+                    }
+                    .linksContainer ul {
+                        margin-left: -5vw;
+                    }
+                    
                 }
             }
 

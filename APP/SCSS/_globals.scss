@@ -1,6 +1,8 @@
 html{
     font-size: 100%;
     box-sizing: border-box;
+    transition: all .5s ease-in-out;
+    scroll-behavior: smooth;
 }
 
 body{

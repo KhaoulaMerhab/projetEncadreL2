@@ -592,7 +592,7 @@ section{
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
-                height: 50vh;
+                height: 65vh;
                 width: 100%;
                 padding: 15vh 0;
                 z-index: -2;
@@ -613,11 +613,19 @@ section{
                         left: 0;    top: -7vw;
                     }
 
+                    .rightForm__part--form{
+                        margin: -6vw 10%;
+                     }
+                    .form__username{
+                        width:60vw;
+                    }
+
                     input[type="text"]{
                         width: 25vw;
                     }
+
                     input[type="email"]{
-                        width: 62vw;
+                        width: 56.5vw;
                     }
                 }
             }
@@ -628,8 +636,113 @@ section{
             @include breakpointDown("small"){
                 margin-top: 40vh;
 
+                .rightForm__part--form{
+                    margin: -6vw 7%;
+
+                    .form__username{
+                        width:65vw;
+                    }
+    
+                    input[type="text"]{
+                        width: 25vw;
+                    }
+    
+                    input[type="email"]{
+                        width: 60vw;
+                    }
+                }
+                
             }
         }
 
     }
+}
+
+//?----------------gallery page section-----------------
+
+section.gallerySection{
+        width: 85%;
+        margin: 5vh auto 10vh ;
+
+        //?filter
+        .filter{
+            margin: 5vh auto;
+            
+            &.gallery-sm{
+                width: 100%;
+                margin: 5vh auto;
+
+                ul{
+                    margin-left: -8vw;
+
+                    li{
+                        margin: 0 .25rem;
+                    }
+                }
+                
+            }
+
+            ul{
+                li{
+                    list-style: none;
+                    padding: .5rem 1.5rem;
+                    margin: 0 .5rem;
+                    color: $darkColor;
+                    font-size: 0.875rem;
+                    font-family: $linksBtnsFont;
+                    font-weight: 500;
+                    border: 2px solid $darkColor;
+                    border-radius: 25rem;
+                    cursor: pointer;     
+                    
+                    &:hover{
+                        background: $darkColor;
+                        color: $white;
+                        transition: all .5s ease-in-out;
+                    }
+                } 
+
+                
+            }
+            
+        }
+
+        //?grid gallery
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+
+            .column{
+                flex: 15%;
+                max-width: 25%;
+                padding: .5vw;
+
+                img{
+                    width: 100%;
+                    padding: .25vw 0;
+                }
+            }
+
+            //*medium
+            &.gallery-md{
+                //hide-for-tablette
+                @include breakpointDown("medium"){
+                    .column{
+                        flex: 50%;
+                        max-width: 45%;
+                    }
+                }
+            }
+
+            //*small
+            &.gallery-sm{
+                //hide-for-mobile
+                @include breakpointDown("small"){
+                    .column{
+                        flex: 100%;
+                        max-width: 90%;
+                    }
+                }
+            }
+        }
 }
