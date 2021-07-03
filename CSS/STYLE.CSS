@@ -174,7 +174,6 @@ body {
   height: 2.5rem;
   width: 92%;
   position: relative;
-  background: #f8f4f1;
 }
 
 .header .nav__logo, header.galleryHeader .nav__logo {
@@ -237,6 +236,7 @@ body {
 .header .nav__hambergurMenu, header.galleryHeader .nav__hambergurMenu {
   cursor: pointer;
   height: 1.6875rem;
+  display: block;
 }
 
 .header .nav__hambergurMenu span, header.galleryHeader .nav__hambergurMenu span {
@@ -339,27 +339,19 @@ body {
   }
 }
 
-@media (max-width: 63.9375em) {
-  .header .bg-nav, header.galleryHeader .bg-nav {
-    background: #f8f4f1;
-    width: 92%;
-    margin: 0;
-  }
-}
-
 @media (min-width: 64em) {
   .header .hide-for-big-devices, header.galleryHeader .hide-for-big-devices {
     display: none;
   }
 }
 
-@media (min-width: 64em) {
-  .header .hide-for-big-devices.fadein, header.galleryHeader .hide-for-big-devices.fadein {
-    display: none;
+@media (max-width: 39.9375em) {
+  .header .bg-nav, header.galleryHeader .bg-nav {
+    background: #f8f4f1;
   }
 }
 
-header.galleryHeader {
+.header header.galleryHeader, header.galleryHeader header.galleryHeader {
   background-image: url("../../imgs/bg-g1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -367,7 +359,7 @@ header.galleryHeader {
   height: 100vh;
 }
 
-header.galleryHeader .galleryArticle {
+.header header.galleryHeader .galleryArticle, header.galleryHeader header.galleryHeader .galleryArticle {
   width: 55vw;
   position: absolute;
   top: 50%;
@@ -376,7 +368,7 @@ header.galleryHeader .galleryArticle {
           transform: translate(-50%, -50%);
 }
 
-header.galleryHeader .galleryArticle__title {
+.header header.galleryHeader .galleryArticle__title, header.galleryHeader header.galleryHeader .galleryArticle__title {
   font-size: 3vw;
   font-family: "Cinzel Decorative", cursive;
   font-weight: 900;
@@ -386,16 +378,16 @@ header.galleryHeader .galleryArticle__title {
   line-height: 1.6;
 }
 
-header.galleryHeader .galleryArticle__title h1 {
+.header header.galleryHeader .galleryArticle__title h1, header.galleryHeader header.galleryHeader .galleryArticle__title h1 {
   font-weight: 900;
 }
 
-header.galleryHeader .galleryArticle__title span {
+.header header.galleryHeader .galleryArticle__title span, header.galleryHeader header.galleryHeader .galleryArticle__title span {
   position: relative;
   z-index: 3;
 }
 
-header.galleryHeader .galleryArticle__title span::after {
+.header header.galleryHeader .galleryArticle__title span::after, header.galleryHeader header.galleryHeader .galleryArticle__title span::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -406,7 +398,7 @@ header.galleryHeader .galleryArticle__title span::after {
   z-index: -1;
 }
 
-header.galleryHeader .galleryArticle__parag {
+.header header.galleryHeader .galleryArticle__parag, header.galleryHeader header.galleryHeader .galleryArticle__parag {
   font-size: 0.875rem;
   font-family: "Raleway", sans-serif;
   color: 0.875rem;
@@ -415,11 +407,11 @@ header.galleryHeader .galleryArticle__parag {
   margin-top: -3vw;
 }
 
-header.galleryHeader .galleryArticle__search {
+.header header.galleryHeader .galleryArticle__search, header.galleryHeader header.galleryHeader .galleryArticle__search {
   padding: 1vh;
 }
 
-header.galleryHeader .galleryArticle__search input {
+.header header.galleryHeader .galleryArticle__search input, header.galleryHeader header.galleryHeader .galleryArticle__search input {
   padding: 1rem;
   width: 51vw;
   border: none;
@@ -433,27 +425,27 @@ header.galleryHeader .galleryArticle__search input {
 }
 
 @media (max-width: 63.9375em) {
-  header.galleryHeader.change-look-md-galHed {
+  .header header.galleryHeader.change-look-md-galHed, header.galleryHeader header.galleryHeader.change-look-md-galHed {
     height: 95vh;
   }
-  header.galleryHeader.change-look-md-galHed .galleryArticle__parag {
+  .header header.galleryHeader.change-look-md-galHed .galleryArticle__parag, header.galleryHeader header.galleryHeader.change-look-md-galHed .galleryArticle__parag {
     margin-top: -15vw;
   }
 }
 
 @media (max-width: 39.9375em) {
-  header.galleryHeader.change-look-sm-galHed {
+  .header header.galleryHeader.change-look-sm-galHed, header.galleryHeader header.galleryHeader.change-look-sm-galHed {
     height: 95vh;
   }
-  header.galleryHeader.change-look-sm-galHed .galleryArticle__title {
+  .header header.galleryHeader.change-look-sm-galHed .galleryArticle__title, header.galleryHeader header.galleryHeader.change-look-sm-galHed .galleryArticle__title {
     font-size: 3.75vw;
     width: 65vw;
   }
-  header.galleryHeader.change-look-sm-galHed .galleryArticle__parag {
+  .header header.galleryHeader.change-look-sm-galHed .galleryArticle__parag, header.galleryHeader header.galleryHeader.change-look-sm-galHed .galleryArticle__parag {
     margin-top: -30vw;
     width: 65vw;
   }
-  header.galleryHeader.change-look-sm-galHed .galleryArticle__search input {
+  .header header.galleryHeader.change-look-sm-galHed .galleryArticle__search input, header.galleryHeader header.galleryHeader.change-look-sm-galHed .galleryArticle__search input {
     width: 65vw;
   }
 }

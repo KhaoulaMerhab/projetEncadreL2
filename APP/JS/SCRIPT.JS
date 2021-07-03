@@ -21,36 +21,36 @@ const reviews = [
         img : '../../imgs/artist2.jpg',
         name : 'Sosan Johnes',
         job : 'Photographer' ,
-        quote : `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-         Cum doloremque velit debitis esse non recusandae, earum dolorem, 
-         ab reiciendis ipsam inventore corrupti placeat, consectetur nisi`
+        quote :`It's been a while we were looking for a good website to get
+        inspiration for my new art work .It's really amazing how you can 
+        find whatever you want in Artemis Galery and to follow your favourite artist `
     },
     {
         id : 2,
         img : '../../imgs/artist3.jpg',
         name : 'Sarah Smith',
         job : 'Digital Artist' ,
-        quote : `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-         Cum doloremque velit debitis esse non recusandae, earum dolorem, 
-         ab reiciendis ipsam inventore corrupti placeat, consectetur nisi`
+        quote :`It's been a while we were looking for a good website to get
+        inspiration for my new art work .It's really amazing how you can 
+        find whatever you want in Artemis Galery and to follow your favourite artist `
     },
     {
         id : 3,
         img : '../../imgs/artist4.jpg',
         name : 'Steven Miler',
         job : '3D Motion Design' ,
-        quote : `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-         Cum doloremque velit debitis esse non recusandae, earum dolorem, 
-         ab reiciendis ipsam inventore corrupti placeat, consectetur nisi`
+        quote :  `It's been a while we were looking for a good website to get
+        inspiration for my new art work .It's really amazing how you can 
+        find whatever you want in Artemis Galery and to follow your favourite artist `
     },
     {
         id : 4,
         img : '../../imgs/artist1.jpg',
         name : 'Christoph Cimpbell',
         job : 'Mangaka' ,
-        quote : `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-         Cum doloremque velit debitis esse non recusandae, earum dolorem, 
-         ab reiciendis ipsam inventore corrupti placeat, consectetur nisi`
+        quote :`It's been a while we were looking for a good website to get
+         inspiration for my new art work .It's really amazing how you can 
+         find whatever you want in Artemis Galery and to follow your favourite artist `
     },
 ] 
 
